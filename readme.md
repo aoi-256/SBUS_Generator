@@ -44,3 +44,7 @@ ser = serial.Serial('com5', baudrate=100000, parity=serial.PARITY_EVEN, stopbits
 ・R   reset
 
 値は 0 <= value <= 2000 の範囲になります
+
+> [!WARNING]
+> #### 勢いよく値が変わるので、モータテストの際には値の増える速度を調整してください
+> 
