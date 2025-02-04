@@ -34,9 +34,13 @@ ser = serial.Serial('com5', baudrate=100000, parity=serial.PARITY_EVEN, stopbits
 ## 操作方法
 
 ・W/S channel 2
+
 ・A/D channel 1
+
 ・Q/E channel 6
+
 ・J/L channel 0
+
 ・R   reset
 
 値は 0 <= value <= 2000 の範囲になります
