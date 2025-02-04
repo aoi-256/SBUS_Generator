@@ -21,16 +21,9 @@ pythonを使って、シリアル通信でSBUSを送るコードです
 # "com5"の部分を変更してください
 ser = serial.Serial('com5', baudrate=100000, parity=serial.PARITY_EVEN, stopbits=2, timeout=1)
 ```
-
-・controlに送りたいデータを入力する(符号なし整数11桁)
-
-```py
-control[0] = 1400
-control[1] = 1500
-control[2] = 1300
-```
-
 ・USB等を接続し、プログラムを実行する`
+
+・ WASDなどのキーボード操作を行い、値を調整しつつ送信する
 
 > [!WARNING]
 > #### 実際の受信機との違い
@@ -38,9 +31,12 @@ control[2] = 1300
 > 信号の反転を行っていません
 > (Not回路などの信号の反転を外して使ってください）
 
-## その他
+## 操作方法
 
-モータテスト等で値を変えたい場合は、キーボード入力で値が変動するシステムを作ってください
+・W/S channel 2
+・A/D channel 1
+・Q/E channel 6
+・J/L channel 0
+・R   reset
 
-> [!TIP]
-> 値が11bitの最大値である2047を超えた後の処理については、検証していませんのでご注意ください
+値は 0 <= value <= 2000 の範囲になります
